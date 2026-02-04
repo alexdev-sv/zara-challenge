@@ -1,5 +1,6 @@
 import PhoneGrid from "@/components/catalog/PhoneGrid"
-import Input from "@/components/layout/input"
+import Input from "@/components/layout/Input"
+import { Navbar } from "@/components/layout/Navbar"
 import { Product } from "@/models/Product"
 import { getProducts } from "@/services/product/product.service"
 import { useEffect, useState } from "react"
@@ -31,6 +32,7 @@ export default function Home() {
   }, [debouncedSearch])
 
   return <>
+    <Navbar/>
     <Input
       onChange={(e) => setSearchText(e.target.value)}
     />

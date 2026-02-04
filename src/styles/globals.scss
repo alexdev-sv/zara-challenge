@@ -170,3 +170,19 @@ a {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.custom-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  span {
+    font-size: 16px;
+  }
+}
