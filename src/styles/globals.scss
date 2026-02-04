@@ -1,3 +1,6 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,6 +17,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 body {
@@ -39,4 +44,129 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid #000000;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.productItem {
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  
+  &:nth-child(5n) {
+    border-right: none;
+    
+    @media (max-width: 1024px) {
+      border-right: 1px solid #e0e0e0;
+    }
+    
+    @media (max-width: 640px) {
+      border-right: none;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    &:nth-child(3n) {
+      border-right: none;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    border-right: none;
+  }
+  
+  .productBrand {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    align-self: flex-start;
+  }
+  
+  .productInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 4px;
+  }
+  
+  .productName {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+  }
+  
+  .productPrice {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+  }
+}
+
+.productImage {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  
+  @media (max-width: 1024px) {
+    max-width: 160px;
+  }
+  
+  @media (max-width: 640px) {
+    max-width: 200px;
+  }
+}
+
+.custom-input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  
+  &::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  
+  &::-webkit-input-placeholder {
+    color: #999;
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.results-container{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
