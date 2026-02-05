@@ -79,8 +79,8 @@ export default function ProductDetailPage() {
                     cursor: 'pointer',
                     backgroundColor: color.hexCode,
                     border: index === selectedColorIndex ? '1px solid #000' : '1px solid #CCCCCC',
-                    outline: '2px solid white', // Borde blanco interno
-                    outlineOffset: '-3px', // Lo posiciona hacia adentro
+                    outline: '2px solid white', 
+                    outlineOffset: '-3px',
                     boxSizing: 'border-box',
                   }}
                   ></div>
