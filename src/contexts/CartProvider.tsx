@@ -31,13 +31,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart([])
   }
 
-  const totalItems = cart.length
-
   return (
     <CartContext.Provider
       value={{
         cart,
-        totalItems,
         addToCart,
         removeFromCart,
         clearCart,
