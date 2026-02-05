@@ -172,11 +172,19 @@ a {
 }
 
 .custom-navbar {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 24px;
+  z-index: 1000; 
+  background-color: white; 
 }
 .cart-container {
   display: flex;
@@ -184,5 +192,122 @@ a {
   gap: 5px;
   span {
     font-size: 16px;
+  }
+}
+.toolbar-container{
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  img {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+  }
+}
+.view-article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  width: 100%;
+}
+.view-article {
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  gap:100px;
+
+
+  .view-article-image-preview {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+
+    .device-image {
+      width: 600px;
+      height: 600px;
+      object-fit: contain;
+      display: block;
+    }   
+  }
+  .view-article-storages-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .view-article-storages {
+      display: flex;
+      flex-direction: row;
+      
+      
+      &-option {
+        width: 95px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        border: 1px solid #CCCCCC;
+        &-selected {
+          border: 1px solid #000
+        }
+      } 
+    }
+  }
+  
+  
+  .view-article-colors {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &-option {    
+      height: 24px;
+      width: 24px;
+    }
+    
+  }
+  .view-article-details{
+    display: flex;
+    width: 380px;
+    flex-direction: column;
+  }
+
+}
+
+.color-device-name{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.add-cart-button {
+  width: 100%;            
+  padding: 12px 0;        
+  background-color: #000; 
+  color: #fff;            
+  text-align: center;     
+  text-transform: uppercase; 
+  font-weight: bold;
+  border: none;           
+  border-radius: 4px;     
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 300;
+
+  &:hover {
+    background-color: #222; 
   }
 }

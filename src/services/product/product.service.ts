@@ -1,9 +1,11 @@
 import { Product } from "@/models/Product"
 import { api } from "../api"
-import { FetchProductRequest } from "../dto/request/fetch-products.dto"
-import { v4 } from "uuid"
 
-export const getProducts = async ({productName} : FetchProductRequest): Promise<Product[]> => {
+import { v4 } from "uuid"
+import { FetchProducstRequest, FetchProductRequest } from "../dto/request/fetch-products.dto"
+import { ProductDetail } from "@/models/ProductDetail"
+
+export const getProducts = async ({productName} : FetchProducstRequest): Promise<Product[]> => {
   const response = await api.get(`/products?limit=20&search=${productName}&offset=0`)
   return response.data.map((product: Record<string, unknown>) => {
     return {
@@ -15,4 +17,8 @@ export const getProducts = async ({productName} : FetchProductRequest): Promise<
       imageUrl: product.imageUrl
     }
   })
+}
+export const getOneProduct = async ({productId} : FetchProductRequest): Promise<ProductDetail> => {
+  const response = await api.get(`/products/${productId}`)
+  return response.data
 }

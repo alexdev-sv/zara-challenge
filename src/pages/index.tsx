@@ -34,6 +34,7 @@ export default function Home() {
   return <>
     <Navbar/>
     <Input
+      placeholder="Search something..."
       onChange={(e) => setSearchText(e.target.value)}
     />
     <div className="results-container">
