@@ -17,7 +17,7 @@ export default function Input({
   ...props 
 }: InputProps) {
   return (
-    <div className={'inputWrapper'}>
+    <div className={'input-wrapper'}>
       <input
         type={type}
         placeholder={placeholder}

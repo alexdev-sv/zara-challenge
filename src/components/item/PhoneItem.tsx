@@ -9,18 +9,18 @@ const PhoneItem = ({ product }: PhoneItemProps) => {
       key={product.id}
       href={`/product/${product.id}`}
     >
-      <div key={product.id} className='productItem'>
+      <div key={product.id} className='product-card'>
         <img
           src={product.imageUrl}
           alt={product.name}
           width={180}
           height={240}
-          className='productImage'
+          className='product-card__image'
         />
-        <div className='productBrand'>{product.brand}</div>
-        <div className='productInfo'>
-          <span className='productName'>{product.name}</span>
-          <span className='productPrice'>{product.basePrice}</span>
+        <div className='product-card__brand'>{product.brand}</div>
+        <div className="product-card__info">
+          <span className='product-card__name'>{product.name}</span>
+          <span className='product-card__price'>{product.basePrice} EUR</span>
         </div>
       </div>
     </Link>

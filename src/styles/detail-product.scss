@@ -1,0 +1,153 @@
+
+.view-article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 70px;
+  
+}
+
+.view-article-storages-container {
+  margin: 20px 0;
+}
+
+
+.view-article {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  
+
+  .view-article-image-preview {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media (min-width: 300px) {
+      margin-left: 10px;
+    }
+
+    .device-image {
+      width: 600px;
+      height: 600px;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+
+  .view-article-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 380px;
+  }
+  .view-article-storages {
+    display: flex;
+    width: fit-content;
+    margin-top: 20px;
+
+    .view-article-storages-option {
+      width: 95px;
+      height: 65px;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin-left: -2px;
+      transition: all 0.2s;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.selected {
+        border-color: #000;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+
+  .view-article-colors {
+    display: flex;
+    gap: 20px;
+
+    &-option {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 40px;
+
+    .view-article-image-preview {
+      width: 200px;
+      height: 200px;
+
+      .device-image {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .view-article-details {
+      padding: 0 10px;
+    }
+  }
+
+  @media (min-width: 300px) {
+    gap: 24px;
+    margin-top: 20px;
+
+    .view-article-details {
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+
+  }
+}
+
+
+.color-device-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.add-cart-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
