@@ -1,12 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Product } from '@/models/Product';
 import CarouselProgress from './CarrouselProgress';
 import ProductCarouselItem from './ProductSimilarItem';
+import { ProductCarouselProps } from './ProductCarrousel.props';
 
-export interface ProductCarouselProps {
-  title?: string;
-  products: Product[];
-}
+
 
 
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ 
@@ -108,8 +105,9 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({
               key={product.id || index}
               brand={product.brand}
               name={product.name}
-              price={product.basePrice.toString()}
-              image={product.imageUrl}
+              basePrice={product.basePrice}
+              imageUrl={product.imageUrl} 
+              id={product.id}            
             />
           ))}
         </div>

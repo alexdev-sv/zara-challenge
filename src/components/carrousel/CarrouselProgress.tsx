@@ -1,10 +1,5 @@
 import React from 'react';
-
-export interface CarouselProgressProps {
-  currentIndex: number;
-  totalItems: number;
-  slidesPerView: number;
-}
+import { CarouselProgressProps } from './CarrouselProgress.props';
 
 const CarouselProgress: React.FC<CarouselProgressProps> = ({ 
   currentIndex, 

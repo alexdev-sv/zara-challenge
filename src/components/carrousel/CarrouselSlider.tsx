@@ -1,10 +1,7 @@
 
-import React, { useRef, ReactNode } from 'react';
+import React, { useRef } from 'react';
+import { CarouselSliderProps } from './CarrouselSlider.props';
 
-export interface CarouselSliderProps {
-  children: ReactNode;
-  slidesPerView?: number;
-}
 
 const CarouselSlider: React.FC<CarouselSliderProps> = ({ 
   children, 

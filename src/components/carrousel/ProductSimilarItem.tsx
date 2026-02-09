@@ -1,24 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
+import { Product } from '@/models/Product';
 import React from 'react';
 
-export interface ProductCarouselItemProps {
-  brand: string;
-  name: string;
-  price: string;
-  image: string;
-}
-
-const ProductCarouselItem: React.FC<ProductCarouselItemProps> = ({ 
+const ProductCarouselItem: React.FC<Product> = ({ 
   brand, 
   name, 
-  price, 
-  image 
+  basePrice, 
+  imageUrl 
 }) => {
   return (
     <div className="product-carousel-item">
       <div className="product-carousel-item__image-container">
         <img 
-          src={image} 
+          src={imageUrl} 
           alt={name}
           className="product-carousel-item__image"
         />
@@ -27,7 +21,7 @@ const ProductCarouselItem: React.FC<ProductCarouselItemProps> = ({
         <span className="product-carousel-item__brand">{brand}</span>
         <div className="product-carousel-item__info">
           <h3 className="product-carousel-item__name">{name}</h3>
-          <span className="product-carousel-item__price">{price}</span>
+          <span className="product-carousel-item__price">{basePrice}</span>
         </div>
       </div>
     </div>

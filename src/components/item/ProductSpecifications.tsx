@@ -1,23 +1,5 @@
 import React from 'react';
-
-export interface Specs {
-  screen: string;
-  resolution: string;
-  processor: string;
-  mainCamera: string;
-  selfieCamera: string;
-  battery: string;
-  os: string;
-  screenRefreshRate: string;
-}
-
-export interface ProductSpecificationsProps {
-  brand: string;
-  name: string;
-  description: string;
-  specs: Specs;
-}
-
+import { ProductSpecificationsProps, Specs } from './ProductSpecifications.props';
 const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({
   brand,
   name,
