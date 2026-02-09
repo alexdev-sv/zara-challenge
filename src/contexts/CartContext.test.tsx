@@ -3,7 +3,6 @@ import { CartItem } from '@/models/CartItem';
 import { ReactNode } from 'react';
 import { CartProvider, useCart } from './CartProvider';
 
-// Helper para envolver hooks en provider
 const wrapper = ({ children }: { children: ReactNode }) => (
   <CartProvider>{children}</CartProvider>
 );
@@ -13,8 +12,10 @@ describe('CartContext', () => {
     const { result } = renderHook(() => useCart(), { wrapper });
 
     const item: CartItem = {
-        id: '1', name: 'Test', price: 10,
-        image: 'image',
+        id: '1', 
+        name: 'Test device', 
+        price: 20,
+        image: 'imageUrl',
         color: 'black',
         storage: '256 GB'
     };
@@ -31,8 +32,10 @@ describe('CartContext', () => {
     const { result } = renderHook(() => useCart(), { wrapper });
 
     const item: CartItem = {
-        id: '1', name: 'Test', price: 10,
-        image: 'image',
+        id: '1', 
+        name: 'Test device', 
+        price: 20,
+        image: 'imageUrl',
         color: 'black',
         storage: '256 GB'
     };
@@ -52,8 +55,10 @@ describe('CartContext', () => {
     const { result } = renderHook(() => useCart(), { wrapper });
 
     const item: CartItem = {
-        id: '1', name: 'Test', price: 10,
-        image: 'image',
+        id: '1', 
+        name: 'Test device', 
+        price: 20,
+        image: 'imageUrl',
         color: 'black',
         storage: '256 GB'
     };
