@@ -1,8 +1,11 @@
-Este repositorio contiene la solución desarrollada para el reto técnico propuesto. El objetivo del proyecto es implementar una aplicación frontend funcional, siguiendo buenas prácticas de desarrollo, con una arquitectura clara y un código mantenible.
+Este repositorio contiene la solución desarrollada para el reto técnico propuesto. El objetivo del proyecto es implementar una aplicación frontend de un ecommerce, siguiendo buenas prácticas de desarrollo y un código mantenible.
 
-La solución ha sido desarrollada utilizando Next.js como framework principal, aprovechando su sistema de rutas. El proyecto está estructurado de forma modular, separando responsabilidades entre páginas, componentes reutilizables, manejo de estado global y estilos.
+La solución ha sido desarrollada utilizando Next.js como framework principal, aprovechando su sistema de rutas. El proyecto está estructurado de forma modular, separando responsabilidades entre páginas, componentes reutilizables, manejo de estado global con React Context API y estilos.
 
 El proyecto sigue una arquitectura basada en componentes y separación de responsabilidades.
+
+El proyecto cuenta con Modelos para el contrato de datos, las llamadas APIs estan de forma modular y estructurada.
+Cada vista de la aplicación tiene su propio archivo SASS para futuras modificaciones en un archivo en especifico.
 
 # Testing
 
